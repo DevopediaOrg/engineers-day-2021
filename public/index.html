@@ -1,72 +1,388 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.10.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.10.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.10.0/firebase-performance.js"></script>
-    <!-- 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devopedia Tech Talks / Engineer's Day 2021</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/8.9.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/8.9.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-functions.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-storage.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-analytics.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-remote-config.js"></script>
+  <script defer src="/__/firebase/8.9.1/firebase-performance.js"></script>
+  <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-  </head>
-  <body>
-    <div id="message">
-      <h1>Hello World!</h1>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+  <link rel="stylesheet" href="default.css" />
+</head>
+
+<body>
+  <div id="container">
+    <img class="banner" src="https://devopedia.org/images/banners/devo-calendar.jpg" alt="Devopedia logo">
+    <h1>Tech Talks / Engineer's Day 2021</h1>
+    <h2><em>Organized by <a href="https://devopedia.org">Devopedia</a></em></h2>
+    <hr>
+
+    <div>
+      <p>In India, we celebrate 15th September as Engineer's Day, the day being the birthday of Sir Mokshagundam
+        Visvesvaraya, who is more commonly known as Sir MV. This year Devopedia is celebrating Engineer's Day with a
+        series of tech talks. All talks are free and open to public.</p>
+      <p>From 1-15 September, we've scheduled tech talks that will interest developers. Each talk will be 45-60 minutes long with another 10-15 minutes for Q&A. Please register below for an email reminder plus an invite to the sessions.</p>
+      <p>All talks will be online via Microsoft Teams. <a href="https://www.microsoft.com/en-in/microsoft-teams/download-app" target="_blank">Download Microsoft Teams</a>. Alternatively, you can join the sessions via Chrome or Microsoft Edge web browsers.</p>
+      <p>Write to webadmin@devopedia.org for any queries.</p>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <h3>Register</h3>
+    <div id=msg style="display: none;"></div>
+    <form id=registerForm>
+      <label for="email">Email</label>
+      <input type=text id=email name=email placeholder="eg. jsmith@gmail.com" />
+      <input type=submit id=register value=Register />
+    </form>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <h3>Schedule</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="images/engdesign.jpg"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              1 Sep, Wed @ 7pm IST<br>
+              Introduction to Engineering Design
+            </div>
+            <div class="author">
+              A Krishnan, Retired as DGM Strategic Business Planning Dept. @ Escorts Group, Faridabad
+            </div>
+            Design is the seed corn for industrial growth and economic progress of any nation. Design and innovation bring competitive advantage. This talk introduces design for engineers. Engineering design can either be original design or creative adaptation. It can be core engineering or industrial design. This talk will present a 360-degree approach to engineering design with plenty of real-world examples and thought-provoking questions. This talk will interest all engineers.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/python-logo.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              3 Sep, Fri @ 7pm IST<br>
+              Python Best Practices
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/arvindpdmn/">Arvind Padmanabhan</a>,
+              Trustee @ Devopedia Foundation
+            </div>
+            This talk will showcase good and bad examples of Python code. The idea is to learn to write Pythonic code. This is distinct from how beginners write Python code when they're coming from other languages such as Java or C. We'll also see examples that clarify the Zen of Python. Talk requires basic knowledge of Python. Talk is suitable for beginners and intermediate Python programmers.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/bayes.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              4 Sep, Sat @ 10am IST<br>
+              Bayesian Inference – Explained with Examples
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/ramanathan-r-438419bb/">Ramanathan R M</a>, Sr. Architect (Data Science) @ SLK Software; Arjun G, Writer @ The Machinist
+            </div>
+            Bayesian interfence is one of the essential concepts in probability. While this talk will present the formulae and related tech jargon, the focus will be to help you understand the concept via examples. This talk is suitable for students of probability, data scientists and programmers transitioning to data science.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/genome.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              4 Sep, Sat @ 4pm IST<br>
+              An Introduction to Genomic Datasets
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/vishwas-n-0590591b0/">Vishwas N</a>, Student, Bug Hunter, Security Researcher, Youtuber
+            </div>
+            This talk will introduce participants to publicly available genomic datasets and how to process them. This is basically a knowledge-sharing session. The speaker will walk through Python code and share links to useful resources and the codebase. The talk is suitable to data scientists, programmers, those who like to work with data and anyone curious about genomic research.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/se.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              4 Sep, Sat @ 7pm IST<br>
+              Is Software Engineering – Engineering?
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/gkrishna/">S Govindkrishna</a>, Founder Director @ DeepSell (Augmented SCM Pvt. Ltd.)
+            </div>
+            What is Software Engineering? Is it really engineering? How different is Software engineering from Mechanical or Civil Engineering? Will a comparison give us any useful insights? This talk is inspired by the classic <em>The Unwritten Laws of Engineering</em> by W. J. King, first published in 1944. It still continues to be in print. This talk is for everyone working in the software industry.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/bus.jpg"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              5 Sep, Sun @ 10am IST<br>
+              ML-Assisted Guidance System for the Visually Impaired
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/abhinavdayal/">Abhinav Dayal</a>, Prof. (CSE) & Dean of Advanced Learning @ Vishnu Institute of Technology, Vishnupur
+            </div>
+            This talk will address challenges common in developing countries: crowded buses, people hanging at the door, buses not stopping at designated spots, poor road conditions, and unregulated traffic in and around the bus. The talk will cover the modeling process, show OpenCV code, discuss results, and give insights into how to plan and execute an ML project. This talk is relevant to anyone interested in Machine Learning.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/textsumm.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              5 Sep, Sun @ 4pm IST<br>
+              Preference-Focused Text Summarization of Hotel Reviews
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/nidhin-s-dharan/">Nidhin S Dharan</a>, Software Engineer Data Science @ SLK Software
+            </div>
+            Text summarization is widely used NLP solution. Summarization is typically done in broad-based manner to cover all the topics in the text. This talk presents a research attempt that filters out not-so-relevant content. Summary of hotel reviews is focused on relevant content based on preferences. The talk will discuss the present solution, new architecture, results and further scope. This talk is relevant to anyone interested in ML and NLP. Some exposure to ML will be helpful.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="images/microservices.jpg"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              8 Sep, Wed @ 7pm IST<br>
+              Why We're Not Using Microservices: A Devopedia Case Study
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/arvindpdmn/">Arvind Padmanabhan</a>,
+              Trustee @ Devopedia Foundation
+            </div>
+            Microservices are all in rage, no doubt because it has many benefits. But are there situations where adopting microservices is a bad idea? At Devopedia, our web app doesn't use microservices. We'll explain why we're not using it, when we'll think of using it and what's a possible migration path. This talk will introduce essential software design principles, monoliths, modular monoliths and more. This talk is suitable for all coders regardless of the programming language they use.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/swift.jpg"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              11 Sep, Sat @ 10am IST<br>
+              Build an iOS App in an Hour
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/pankaj-kulkarni-9568284/">Pankaj Kulkarni</a>, Freelance iOS Developer
+            </div>
+            Apple has recently announce native support for Reactive Programming with SwiftUI and Combine frameworks. 
+            <b>SwiftUI</b> provides views, controls, and layout structures for declaring your app's user interface. The framework provides event handlers for delivering taps, gestures, and other types of input to your app, and tools to manage the flow of data from your app's models down to the views and controls that users will see and interact with.
+            <b>Combine</b> framework provides a declarative Swift API for processing values over time. These values can represent many kinds of asynchronous events. Combine declares publishers to expose values that can change over time, and subscribers to receive those values from the publishers.        
+            In this session, we'll develop a Weather App that fetches the latest weather using a Combine Publisher. The data is rendered on UI using the SwiftUI Subscribers.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/microfrontend.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              11 Sep, Sat @ 4pm IST<br>
+              The Driving Forces for Micro Frontends 
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/nagkumar/">Raja Nagendra Kumar</a>, CTO, Code Architect, Code Doctor @ TejaSoft Innovations Pvt. Ltd. 
+            </div>
+            While microservices got rid of backend monoliths, frontend monoliths remained a problem. Micro Frontends architecture attempts to fix this through transformational operating models. Micro Frontends is the way we think about and build feature changes. This talk would go deeper into the design approach in which a frontend app is decomposed into individual, semi-independent "microapps" working loosely together. We'll see how this benefits and empowers developers. We'll cover principles, possible architectures, challenges, horizontal/vertical split, team structures, automation pipeline and patterns.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/5gcore.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              11 Sep, Sat @ 7pm IST<br>
+              Introduction to 5G Core
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/sanjaynolkha/">Sanjay Kumar</a>, Entrepreneur, Founder, Trainer 
+            </div>
+            This session is designed for professionals who would like to get an overview of 5G Core Networks and implementation, understand the evolution of Core Networks from 4G to 5G, understand 5G Network Applications and their deployment on Cloud Native Architecture. This talk would interest all telecom professionals. Prior exposure to 3G or 4G would help but not essential.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="images/app-uiux.jpg" alt=""
+              />
+          </td>
+          <td>
+            <div class="title">
+              12 Sep, Sun @ 10am IST<br>
+              Five Critical Steps to Enhance the User Experience (UX) of Your Website or App
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/anuradha-c-a141a610/">Anuradha C</a>, IT
+              Corporate Trainer & Freelance Content Writer
+            </div>
+            A Do-It-Yourself guide for web and mobile app developers.
+            Learn how to design your product and its UI to suit your target audience's exact needs.
+            Five important and hugely effective mechanisms for successful user onboarding and retention.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/firebase.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              12 Sep, Sun @ 4pm IST<br>
+              Step-by-step Web App Development with Firebase
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/arvindpdmn/">Arvind Padmanabhan</a>,
+              Trustee @ Devopedia Foundation
+            </div>
+            This talk will cover the essential steps to develop a complete web application. For the backend, we'll use Google's Firebase. For the frontend, we'll use HTML, CSS and JavaScript. We'll walkthrough a working codebase. We'll configure DNS for a custom domain. We'll learn what Firebase has to offer. In the process, beginners will learn to appreciate the web app development process. This talk is ideal for beginners, UI designers and frontend developers who wish to transition to fullstack development.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+              src="images/looker.png"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              14 Sep, Tue @ 7pm IST<br>
+              An Introduction to Looker – Google's BI Platform
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/sivaraj/">Sivaraj Ambat</a>, Principal Consultant & Senior Fellow @ Tech Mahindra
+            </div>
+            Looker is a modern data platform in Google Cloud that lets you analyze and visualize your data interactively. You can use Looker to do in-depth data analysis, integrate insights across different data sources, build actionable data-driven workflows, and create custom data applications. Looker supports LookML (Looker Modeling Language) which is a proprietary language that is used to generate abstracted SQL and provides a modeling layer. Looker’s data visualizations and dashboards give you the flexibility to drill down into your data while maintaining a secure, birds-eye of the operations. In this session, we will discuss what Looker is, how to use Looker to visualize data, understand core LookML terms and concepts, and create views and build a dashboard with appropriate data views.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="images/tech-freelancer.jpg"
+              alt="" />
+          </td>
+          <td>
+            <div class="title">
+              15 Sep, Wed @ 7pm IST<br>
+              How to Survive and Thrive as a Freelance Tech Professional in Today's Times
+            </div>
+            <div class="author">
+              <a href="https://www.linkedin.com/in/anuradha-c-a141a610/">Anuradha C</a>, IT
+              Corporate Trainer & Freelance Content Writer
+            </div>
+            Useful insights from the personal experiences of freelance techies.
+            Managing work schedules, keeping pace with technological change, understanding client interests, financial management and work-life balance.
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><br><br></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
 </html>

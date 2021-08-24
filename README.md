@@ -25,3 +25,8 @@ On your computer, execute the following from a node.js terminal (requires node.j
 It's a good idea to test your app locally before deploying to Firebase. Firebase provides emulators for this purpose. Emulators can be started with the command `firebase emulators:start`. Access the local app on the port used by the emulator. Firebase dashboard can also be accessed via the web browser, although on a different port.
 
 
+# Config Files
+
+Two files are essential:
+* `firebase.json` : specify port numbers and public folder for hosting
+* `database.rules.json` : rules to access the database

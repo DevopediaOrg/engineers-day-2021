@@ -1,0 +1,97 @@
+body {
+    font-family: Raleway;
+    background-image: url(images/archbg.jpg);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#container {
+    margin: auto;
+    padding: 20px;
+    background-color: aliceblue;
+    max-width: 800px;
+    opacity: 96%;
+}
+
+@media (max-width: 800px) {
+    #container {
+        max-width: 80%;
+    }
+}
+
+#container img {
+    width: 100%;
+}
+
+td img {
+    border-radius: 5%;
+}
+
+h1 {
+    line-height: 1.5em;
+}
+
+h3 {
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+a {
+    color: #46e;
+    text-decoration: none;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    line-height: 2em;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 300px;
+    max-width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #f49;
+    color: white;
+    border: solid 1px #f49;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#msg {
+    color: white;
+    font-weight: bold;
+    background-color: #f49;
+    padding-left: 10px;
+}
+
+.title {
+    font-size: 1.2em; 
+    font-weight: bold;
+    color: #f49
+}
+
+.author {
+    border-bottom: 1px solid;
+}
+
+tr td:first-child {
+    vertical-align: top;
+    width: 150px;
+}
+
+@media (max-width: 800px) {
+    tr td:first-child {
+        width: 100px;
+    }
+}
+
+tr td:nth-child(2) {
+    padding-left: 20px;
+}
