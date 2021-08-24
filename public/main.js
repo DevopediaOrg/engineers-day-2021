@@ -38,7 +38,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    const talksRef = firebase.database().ref('talks');
+    talksRef.get().then((snapshot) => {
+      if (snapshot.exists()) {
+        talks = [];
+        snapshot.forEach((talk) => {
+          talk = talk.val();
+
+          speakers = [];
+          talk.speakers.forEach((speaker) => {
+            var name = 'link' in speaker && speaker.link
+                        ? `<a href="${speaker.link}">${speaker.name}</a>`
+                        : speaker.name;
+            speakers.push(`${name}, ${speaker.intro}`);
+          });
+
+          talks.push(`
+            <tr>
+                <td>
+                    <img src="${talk.teaser}" alt="" />
+                </td>
+                <td>
+                    <div class="title">
+                        ${talk.datetime}<br>
+                        ${talk.title}
+                    </div>
+                    <div class="author">
+                        ${speakers.join('<br>')}
+                    </div>
+                    ${talk.synopsis}
+                </td>
+            </tr>
+            <tr>
+                <td colspan=2><br><br></td>
+            </tr>
+          `);
+        });
+        document.getElementById('talks').innerHTML = `${talks.join('\n')}`;
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
     firebase.analytics();
+
     
     // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
     // // The Firebase SDK is initialized and available here!
