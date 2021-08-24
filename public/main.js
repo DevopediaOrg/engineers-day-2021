@@ -38,6 +38,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function secs2dhms(secs) {
+      var day = 86400;
+      var hour = 3600;
+      var minute = 60;
+      var daysout = Math.floor(secs / day);
+      var hoursout = Math.floor((secs - daysout * day)/hour);
+      var minutesout = Math.floor((secs - daysout * day - hoursout * hour)/minute);
+      var secondsout = secs - daysout * day - hoursout * hour - minutesout * minute;
+      return [daysout, hoursout, minutesout, secondsout];
+    }
+
+    setInterval(() => {
+      Array.prototype.forEach.call(document.getElementsByClassName('countdown'), (elem) => {
+        var parts = /(\d+)h (\d+)m (\d+)s/.exec(elem.innerHTML);
+        var newsecs = parts[1]*3600 + parts[2]*60 + parts[3]*1 - 1; // *1 to convert to int
+        var timer = secs2dhms(newsecs);
+        elem.innerHTML = `Starts in<br>${timer[1]}h ${timer[2]}m ${timer[3]}s`;
+      });
+    }, 1000);
+    
     const talksRef = firebase.database().ref('talks');
     talksRef.get().then((snapshot) => {
       if (snapshot.exists()) {
@@ -45,6 +65,37 @@ document.addEventListener('DOMContentLoaded', function() {
         snapshot.forEach((talk) => {
           talk = talk.val();
 
+          // Is current time coinciding with talk time?
+          var talkclass = '';
+          var meetmsg = 'Join Meeting';
+          var when = talk.datetime;
+          when = when.replace(/(.*),\s+\w+\s+@\s+(\d+)\s*(am|pm).*/, '$1 2021, $2:00 $3');
+          when = new Date(when);
+          var now = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"})
+          now = new Date(now);
+          var diffsecs = (when - now) / 1000;
+          if (diffsecs < -3600) {  // assuming talks run for about an hour
+            meetmsg = 'Completed';
+            talkclass = 'completed';
+          }
+          else if (diffsecs<0) {
+            meetmsg = '<span class="live">&#9673;</span> Join Meeting<br>&#9656; Now Live';
+          }
+          else {
+            var timer = secs2dhms(diffsecs);
+            if (timer[0]>1) meetmsg = `Join Meeting<br>&#9656; Starts in<br>${timer[0]} days`;
+            else if (timer[0]==1) meetmsg = 'Join Meeting<br>&#9656; Starts in<br>1 day';
+            else {
+              meetmsg = `Join Meeting<br>&#9656; <span class='countdown'>Starts in<br>${timer[1]}h ${timer[2]}m ${timer[3]}s</span>`
+            }
+          }
+
+          // Venue is made public for imminent talks
+          var venue = 'venue' in talk && talk.venue
+                      ? `<a class="meet" href="${talk.venue}" target="_blank">${meetmsg}</a>`
+                      : '';
+
+          // Mostly single speaker but some talks have multiple speakers
           speakers = [];
           talk.speakers.forEach((speaker) => {
             var name = 'link' in speaker && speaker.link
@@ -52,11 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         : speaker.name;
             speakers.push(`${name}, ${speaker.intro}`);
           });
-
+          
           talks.push(`
-            <tr>
+            <tr class=${talkclass}>
                 <td>
                     <img src="${talk.teaser}" alt="" />
+                    ${venue}
                 </td>
                 <td>
                     <div class="title">
@@ -69,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${talk.synopsis}
                 </td>
             </tr>
-            <tr>
+            <tr class=${talkclass}>
                 <td colspan=2><br><br></td>
             </tr>
           `);

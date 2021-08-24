@@ -64,6 +64,22 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.live {
+    color: #f49;
+    animation: blinker 1.5s linear infinite;
+} 
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+a.meet {
+    display: block;
+    margin-top: 20px;
+}
+
 #msg {
     color: white;
     font-weight: bold;
@@ -81,9 +97,14 @@ input[type="submit"] {
     border-bottom: 1px solid;
 }
 
+tr.completed {
+    display: none;
+}
+
 tr td:first-child {
     vertical-align: top;
     width: 150px;
+    text-align: right;
 }
 
 @media (max-width: 800px) {
