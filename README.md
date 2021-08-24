@@ -30,3 +30,8 @@ It's a good idea to test your app locally before deploying to Firebase. Firebase
 Two files are essential:
 * `firebase.json` : specify port numbers and public folder for hosting
 * `database.rules.json` : rules to access the database
+
+
+# Cloud Functions
+
+To serve dynamic content, we'll make use of Firebase Cloud Functions. This can be initialized in the existing project via the command `firebase init functions`. We'll use JavaScript as the language. Cloud Functions are accessed on a different port.
