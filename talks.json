@@ -1,0 +1,202 @@
+{
+    "talks" : [
+        {
+            "title" : "Introduction to Engineering Design",
+            "datetime" : "1 Sep, Wed @ 7pm IST",
+            "teaser" : "images/engdesign.jpg",
+            "speakers" : [
+                {
+                    "name" : "A Krishnan",
+                    "intro" : "Retired as DGM Strategic Business Planning Dept. @ Escorts Group, Faridabad"
+                }
+            ],
+            "synopsis" : "Design is the seed corn for industrial growth and economic progress of any nation. Design and innovation bring competitive advantage. This talk introduces design for engineers. Engineering design can either be original design or creative adaptation. It can be core engineering or industrial design. This talk will present a 360-degree approach to engineering design with plenty of real-world examples and thought-provoking questions. This talk will interest all engineers."
+        },
+        {
+            "title" : "Python Best Practices",
+            "datetime" : "3 Sep, Fri @ 7pm IST",
+            "teaser" : "images/python-logo.png",
+            "speakers" : [
+                {
+                    "name" : "Arvind Padmanabhan",
+                    "link" : "https://www.linkedin.com/in/arvindpdmn/",
+                    "intro" : "Trustee @ Devopedia Foundation"
+                }
+            ],
+            "synopsis" : "This talk will showcase good and bad examples of Python code. The idea is to learn to write Pythonic code. This is distinct from how beginners write Python code when they're coming from other languages such as Java or C. We'll also see examples that clarify the Zen of Python. Talk requires basic knowledge of Python. Talk is suitable for beginners and intermediate Python programmers."
+        },
+        {
+            "title" : "Bayesian Inference – Explained with Examples",
+            "datetime" : "4 Sep, Sat @ 10am IST",
+            "teaser" : "images/bayes.png",
+            "speakers" : [
+                {
+                    "name" : "Ramanathan R M",
+                    "link" : "https://www.linkedin.com/in/ramanathan-r-438419bb/",
+                    "intro" : "Sr. Architect (Data Science) @ SLK Software"
+                },
+                {
+                    "name" : "Arjun G",
+                    "intro" : "Writer @ The Machinist"
+                }
+            ],
+            "synopsis" : "Bayesian interfence is one of the essential concepts in probability. While this talk will present the formulae and related tech jargon, the focus will be to help you understand the concept via examples. This talk is suitable for students of probability, data scientists and programmers transitioning to data science."
+        },
+        {
+            "title" : "An Introduction to Genomic Datasets",
+            "datetime" : "4 Sep, Sat @ 4pm IST",
+            "teaser" : "images/genome.png",
+            "speakers" : [
+                {
+                    "name" : "Vishwas N",
+                    "link" : "https://www.linkedin.com/in/vishwas-n-0590591b0/",
+                    "intro" : "Student, Bug Hunter, Security Researcher, Youtuber"
+                }
+            ],
+            "synopsis" : "This talk will introduce participants to publicly available genomic datasets and how to process them. This is basically a knowledge-sharing session. The speaker will walk through Python code and share links to useful resources and the codebase. The talk is suitable to data scientists, programmers, those who like to work with data and anyone curious about genomic research."
+        },
+        {
+            "title" : "Is Software Engineering – Engineering?",
+            "datetime" : "4 Sep, Sat @ 7pm IST",
+            "teaser" : "images/se.png",
+            "speakers" : [
+                {
+                    "name" : "S Govindkrishna",
+                    "link" : "https://www.linkedin.com/in/gkrishna/",
+                    "intro" : "Founder Director @ DeepSell (Augmented SCM Pvt. Ltd.)"
+                }
+            ],
+            "synopsis" : "What is Software Engineering? Is it really engineering? How different is Software engineering from Mechanical or Civil Engineering? Will a comparison give us any useful insights? This talk is inspired by the classic <em>The Unwritten Laws of Engineering</em> by W. J. King, first published in 1944. It still continues to be in print. This talk is for everyone working in the software industry."
+        },
+        {
+            "title" : "ML-Assisted Guidance System for the Visually Impaired",
+            "datetime" : "5 Sep, Sun @ 10am IST",
+            "teaser" : "images/bus.jpg",
+            "speakers" : [
+                {
+                    "name" : "Abhinav Dayal",
+                    "link" : "https://www.linkedin.com/in/abhinavdayal/",
+                    "intro" : "Prof. (CSE) & Dean of Advanced Learning @ Vishnu Institute of Technology, Vishnupur"
+                }
+            ],
+            "synopsis" : "This talk will address challenges common in developing countries: crowded buses, people hanging at the door, buses not stopping at designated spots, poor road conditions, and unregulated traffic in and around the bus. The talk will cover the modeling process, show OpenCV code, discuss results, and give insights into how to plan and execute an ML project. This talk is relevant to anyone interested in Machine Learning."
+        },
+        {
+            "title" : "Preference-Focused Text Summarization of Hotel Reviews",
+            "datetime" : "5 Sep, Sun @ 4pm IST",
+            "teaser" : "images/textsumm.png",
+            "speakers" : [
+                {
+                    "name" : "Nidhin S Dharan",
+                    "link" : "https://www.linkedin.com/in/nidhin-s-dharan/",
+                    "intro" : "Software Engineer Data Science @ SLK Software"
+                }
+            ],
+            "synopsis" : "Text summarization is widely used NLP solution. Summarization is typically done in broad-based manner to cover all the topics in the text. This talk presents a research attempt that filters out not-so-relevant content. Summary of hotel reviews is focused on relevant content based on preferences. The talk will discuss the present solution, new architecture, results and further scope. This talk is relevant to anyone interested in ML and NLP. Some exposure to ML will be helpful."
+        },
+        {
+            "title" : "Why We're Not Using Microservices: A Devopedia Case Study",
+            "datetime" : "8 Sep, Wed @ 7pm IST",
+            "teaser" : "images/microservices.jpg",
+            "speakers" : [
+                {
+                    "name" : "Arvind Padmanabhan",
+                    "link" : "https://www.linkedin.com/in/arvindpdmn/",
+                    "intro" : "Trustee @ Devopedia Foundation"
+                }
+            ],
+            "synopsis" : "Microservices are all in rage, no doubt because it has many benefits. But are there situations where adopting microservices is a bad idea? At Devopedia, our web app doesn't use microservices. We'll explain why we're not using it, when we'll think of using it and what's a possible migration path. This talk will introduce essential software design principles, monoliths, modular monoliths and more. This talk is suitable for all coders regardless of the programming language they use."
+        },
+        {
+            "title" : "Build an iOS App in an Hour",
+            "datetime" : "11 Sep, Sat @ 10am IST",
+            "teaser" : "images/swift.jpg",
+            "speakers" : [
+                {
+                    "name" : "Pankaj Kulkarni",
+                    "link" : "https://www.linkedin.com/in/pankaj-kulkarni-9568284/",
+                    "intro" : "Freelance iOS Developer"
+                }
+            ],
+            "synopsis" : "Apple has recently announce native support for Reactive Programming with SwiftUI and Combine frameworks. <b>SwiftUI</b> provides views, controls, and layout structures for declaring your app's user interface. The framework provides event handlers for delivering taps, gestures, and other types of input to your app, and tools to manage the flow of data from your app's models down to the views and controls that users will see and interact with. <b>Combine</b> framework provides a declarative Swift API for processing values over time. These values can represent many kinds of asynchronous events. Combine declares publishers to expose values that can change over time, and subscribers to receive those values from the publishers. In this session, we'll develop a Weather App that fetches the latest weather using a Combine Publisher. The data is rendered on UI using the SwiftUI Subscribers."
+        },
+        {
+            "title" : "The Driving Forces for Micro Frontends",
+            "datetime" : "11 Sep, Sat @ 4pm IST",
+            "teaser" : "images/microfrontend.png",
+            "speakers" : [
+                {
+                    "name" : "Raja Nagendra Kumar",
+                    "link" : "https://www.linkedin.com/in/nagkumar/",
+                    "intro" : "CTO, Code Architect, Code Doctor @ TejaSoft Innovations Pvt. Ltd."
+                }
+            ],
+            "synopsis" : "While microservices got rid of backend monoliths, frontend monoliths remained a problem. Micro Frontends architecture attempts to fix this through transformational operating models. Micro Frontends is the way we think about and build feature changes. This talk would go deeper into the design approach in which a frontend app is decomposed into individual, semi-independent \"microapps\" working loosely together. We'll see how this benefits and empowers developers. We'll cover principles, possible architectures, challenges, horizontal/vertical split, team structures, automation pipeline and patterns."
+        },
+        {
+            "title" : "Introduction to 5G Core",
+            "datetime" : "11 Sep, Sat @ 7pm IST",
+            "teaser" : "images/5gcore.png",
+            "speakers" : [
+                {
+                    "name" : "Sanjay Kumar",
+                    "link" : "https://www.linkedin.com/in/sanjaynolkha/",
+                    "intro" : "Entrepreneur, Founder, Trainer"
+                }
+            ],
+            "synopsis" : "This session is designed for professionals who would like to get an overview of 5G Core Networks and implementation, understand the evolution of Core Networks from 4G to 5G, understand 5G Network Applications and their deployment on Cloud Native Architecture. This talk would interest all telecom professionals. Prior exposure to 3G or 4G would help but not essential."
+        },
+        {
+            "title" : "Five Critical Steps to Enhance the User Experience (UX) of Your Website or App",
+            "datetime" : "12 Sep, Sun @ 10am IST",
+            "teaser" : "images/app-uiux.jpg",
+            "speakers" : [
+                {
+                    "name" : "Anuradha C",
+                    "link" : "https://www.linkedin.com/in/anuradha-c-a141a610/",
+                    "intro" : "IT Corporate Trainer & Freelance Content Writer"
+                }
+            ],
+            "synopsis" : "A Do-It-Yourself guide for web and mobile app developers. Learn how to design your product and its UI to suit your target audience's exact needs. Five important and hugely effective mechanisms for successful user onboarding and retention."
+        },
+        {
+            "title" : "Step-by-step Web App Development with Firebase",
+            "datetime" : "12 Sep, Sun @ 4pm IST",
+            "teaser" : "images/firebase.png",
+            "speakers" : [
+                {
+                    "name" : "Arvind Padmanabhan",
+                    "link" : "https://www.linkedin.com/in/arvindpdmn/",
+                    "intro" : "Trustee @ Devopedia Foundation"
+                }
+            ],
+            "synopsis" : "This talk will cover the essential steps to develop a complete web application. For the backend, we'll use Google's Firebase. For the frontend, we'll use HTML, CSS and JavaScript. We'll walkthrough a working codebase. We'll configure DNS for a custom domain. We'll learn what Firebase has to offer. In the process, beginners will learn to appreciate the web app development process. This talk is ideal for beginners, UI designers and frontend developers who wish to transition to fullstack development."
+        },
+        {
+            "title" : "An Introduction to Looker – Google's BI Platform",
+            "datetime" : "14 Sep, Tue @ 7pm IST",
+            "teaser" : "images/looker.png",
+            "speakers" : [
+                {
+                    "name" : "Sivaraj Ambat",
+                    "link" : "https://www.linkedin.com/in/sivaraj/",
+                    "intro" : "Principal Consultant & Senior Fellow @ Tech Mahindra"
+                }
+            ],
+            "synopsis" : "Looker is a modern data platform in Google Cloud that lets you analyze and visualize your data interactively. You can use Looker to do in-depth data analysis, integrate insights across different data sources, build actionable data-driven workflows, and create custom data applications. Looker supports LookML (Looker Modeling Language) which is a proprietary language that is used to generate abstracted SQL and provides a modeling layer. Looker’s data visualizations and dashboards give you the flexibility to drill down into your data while maintaining a secure, birds-eye of the operations. In this session, we will discuss what Looker is, how to use Looker to visualize data, understand core LookML terms and concepts, and create views and build a dashboard with appropriate data views."
+        },
+        {
+            "title" : "How to Survive and Thrive as a Freelance Tech Professional in Today's Times",
+            "datetime" : "15 Sep, Wed @ 7pm IST",
+            "teaser" : "images/tech-freelancer.jpg",
+            "speakers" : [
+                {
+                    "name" : "Anuradha C",
+                    "link" : "https://www.linkedin.com/in/anuradha-c-a141a610/",
+                    "intro" : "IT Corporate Trainer & Freelance Content Writer"
+                }
+            ],
+            "synopsis" : "Useful insights from the personal experiences of freelance techies. Managing work schedules, keeping pace with technological change, understanding client interests, financial management and work-life balance."
+        }
+    ]
+}

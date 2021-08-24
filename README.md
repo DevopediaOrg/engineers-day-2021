@@ -34,4 +34,8 @@ Two files are essential:
 
 # Cloud Functions
 
-To serve dynamic content, we'll make use of Firebase Cloud Functions. This can be initialized in the existing project via the command `firebase init functions`. We'll use JavaScript as the language. Cloud Functions are accessed on a different port.
+To serve dynamic content, we'll make use of Firebase Cloud Functions. This can be initialized in the existing project via the command `firebase init functions`. We'll use JavaScript as the language. Cloud Functions are accessed on a different port. Note that use of Cloud Functions is not possible under the free tier. However, you can still develop and test your app on local emulator.
+
+Via rewrite rules in `firebase.json`, we can redirect specific URL request to specific functions. Changes to rewrite rules require restart of emulators.
+
+All scheduled talks are now listed in `talks.json`. Import this into the database. Note that this import has to be done every time emulators are restarted.
