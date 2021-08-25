@@ -2,6 +2,10 @@
 
 This project implements an event page that includes a registration form. This project is based on Firebase backend and vanilla JavaScript frontend. This codebase can be a useful starting point for beginners who wish to get started with Firebase.
 
+This repo has two branches:
+* **master**: server-side rendering with Firebase Cloud Functions
+* **dynamic-client**: client-side rendering
+
 For an high-level introduction to Firebase, visit [Devopedia's Firebase article](https://devopedia.org/firebase).
 
 
