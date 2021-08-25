@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
           // Is current time coinciding with talk time?
           var talkclass = '';
           var meetmsg = 'Join Meeting';
-          var when = talk.datetime;
-          when = when.replace(/(.*),\s+\w+\s+@\s+(\d+)\s*(am|pm).*/, '$1 2021, $2:00 $3');
-          when = new Date(when);
-          var now = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"})
+          var now = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) // eg. '9/4/2021, 10:33:26 AM'
           now = new Date(now);
+          var when = talk.datetime;
+          when = when.replace(/(.*),\s+\w+\s+@\s+(\d+)\s*(am|pm).*/, '$1 '+now.getFullYear()+', $2:00 $3');
+          when = new Date(when);
           var diffsecs = (when - now) / 1000;
           if (diffsecs < -3600) {  // assuming talks run for about an hour
             meetmsg = 'Completed';
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          // Venue is made public for imminent talks
+          // Venue and meetmsg are made public if venue is configured
           var venue = 'venue' in talk && talk.venue
                       ? `<a class="meet" href="${talk.venue}" target="_blank">${meetmsg}</a>`
                       : '';

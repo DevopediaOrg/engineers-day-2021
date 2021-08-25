@@ -30,3 +30,12 @@ It's a good idea to test your app locally before deploying to Firebase. Firebase
 Two files are essential:
 * `firebase.json` : specify port numbers and public folder for hosting
 * `database.rules.json` : rules to access the database
+
+
+# Useful Firebase Commands
+* `firebase --help`: get CLI help
+* `firebase projects:list`: list all projects for the current login
+* `firebase use --add`: add a new project alias in the current workspace (aliases are saved in `.firebaserc`)
+* `firebase use default`: make 'default' project the current project
+* `firebase deploy --except functions`: deploy without functions, in case functions were initialized in this workspace
+* `firebase emulators:start --only database,hosting`: start only the specified emulators
