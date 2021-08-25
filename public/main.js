@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('registerForm').reset();
             document.getElementById('registerForm').style.display = "none";
 
-            document.getElementById('msg').innerHTML = 'You\'re registered!';
+            document.getElementById('msg').innerHTML = 'You\'re registered!<br>You\'ll get an email closer to the start of each talk.';
             document.getElementById('msg').style.display = "block";
         }
     }
