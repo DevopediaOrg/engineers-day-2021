@@ -53,8 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
       Array.prototype.forEach.call(document.getElementsByClassName('countdown'), (elem) => {
         var parts = /(\d+)h (\d+)m (\d+)s/.exec(elem.innerHTML);
         var newsecs = parts[1]*3600 + parts[2]*60 + parts[3]*1 - 1; // *1 to convert to int
-        var timer = secs2dhms(newsecs);
-        elem.innerHTML = `Starts in<br>${timer[1]}h ${timer[2]}m ${timer[3]}s`;
+        if (newsecs>=0) {
+          var timer = secs2dhms(newsecs);
+          elem.innerHTML = `Starts in<br>${timer[1]}h ${timer[2]}m ${timer[3]}s`;
+        }
+        else {
+          elem.parentElement.innerHTML = '<span class="live">&#9673;</span> Join Meeting<br>&#9656; Now Live';
+        }
       });
     }, 1000);
     
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Is current time coinciding with talk time?
           var talkclass = '';
           var meetmsg = 'Join Meeting';
-          var now = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) // eg. '9/4/2021, 10:33:26 AM'
+          var now = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) // eg. '4/23/2021, 10:33:26 AM'
           now = new Date(now);
           var when = talk.datetime;
           when = when.replace(/(.*),\s+\w+\s+@\s+(\d+)\s*(am|pm).*/, '$1 '+now.getFullYear()+', $2:00 $3');
