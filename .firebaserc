@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "demo1-647f5",
-    "prod": "engineers-day-2021"
+    "default": "engineers-day-2021"
   },
   "targets": {}
 }
