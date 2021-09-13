@@ -1,6 +1,14 @@
 {
   "rules": {
-    ".read": false,
-    ".write": true
+    "talks": {
+      ".read": true,
+      ".write": false
+    },
+    "regs": {
+      "$id": {
+        ".read": false,
+        ".write": true
+      }
+    }
   }
 }
